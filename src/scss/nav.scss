@@ -1,0 +1,643 @@
+body {
+    width: 100vw;
+    background-color: navy;
+}
+
+
+.bg-cover {
+    background-size: cover;
+    width: 100vw;
+}
+
+// display 
+
+.block {
+    display: block;
+}
+
+.grid {
+    display: grid
+}
+
+.hidden {
+    display: none;
+}
+
+
+// flex 
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+// overflow 
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-visible {
+    overflow: visible;
+}
+// interactivity 
+
+.appearance-none {
+    appearance: none;
+}
+
+
+// img sizes
+
+.h-7 {
+    height: 1.75rem;
+}
+
+.h-16 {
+    height: 4rem;
+}
+
+.h-7 {
+    width: 1.75rem;
+}
+
+.w-16 {
+    width: 4rem;
+}
+
+// img
+
+.placeholder-white {
+    color: #ffffff;
+}
+
+// alignment & items
+
+.align-between {
+    align-content: space-between;
+}
+
+.align-middle {
+    vertical-align: middle;
+}
+
+.items-center {
+    align-items: center;
+}
+
+// space between elements
+
+.space-x-8 {
+    margin-left: 2rem;
+}
+
+// lists
+
+
+.list-none {
+    list-style-type: none;
+}
+
+// text
+
+.font-light {
+    font-weight: 300;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.leading-relaxed {
+    line-height: 1.625;
+}
+
+
+// text sizes 
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.text-base {
+    font-size: 1rem; line-height: 1.5rem;
+}
+
+.text-lg {
+    font-size: 1.125rem; line-height: 1.75rem;
+}
+
+.text-xl {
+    font-size: 1.25rem/* 20px */;
+    line-height: 1.75rem/* 28px */;
+}
+
+.text-2xl {
+    font-size: 1.5rem/* 24px */; 
+    line-height: 2rem;
+}
+
+.text-3xl {
+    font-size: 1.875rem/* 30px */; 
+    line-height: 2.25rem;
+}
+
+// text color
+
+.text-gray-800 {
+    --tw-text-opacity: 1;
+    color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+// background colors
+
+.bg-gray-900 {
+    background-color: #111827;
+}
+
+.bg-indigo-900 {
+    background-color: #312E81;
+}
+
+// margin padding
+
+.mb-4 {
+    margin-bottom: 1rem/* 16px */;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-10 {
+    margin-bottom: 2.5rem;
+}
+
+.mt-2 {
+    margin: 0.5rem;
+}
+
+.mt-3 {
+    margin: 0.75rem; 
+}
+
+.mt-4 {
+    margin: 1rem;
+}
+
+.mt-6 {
+    margin-top: 1.5rem/* 24px */;
+}
+
+.mx-2 {
+    margin-left: 0.5rem; 
+    margin-right: 0.5rem;
+}
+
+.mx-4 {
+    margin-left: 1rem; 
+    margin-right: 1rem;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.p-8 {
+    padding: 2rem;
+}
+
+// hover pictos social medias
+
+
+// min & max sizes
+
+.max-w-sm {
+    max-width: 24rem;/* 384px */
+}
+
+.max-w-md {
+    max-width: 28rem;/* 448px */
+}
+
+.max-w-lg {
+    max-width: 32rem;/* 512px */
+}
+
+.max-w-xl {
+    max-width: 36rem;/* 576px */
+}
+
+// breakpoints
+
+@media (min-width: 640px) { 
+    #columns {
+        width:100%;
+    }
+}
+
+/* min-width pour moyennes résolutions */
+@media screen and (min-width: 1024px) {
+	#main {
+		width:70%;
+		clear:none;
+	}
+	#aside {
+		width:30%;
+		clear:none;
+	}
+}
+
+// dark mode / light mode
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color : #1c1c1e ;
+        color : #fefefe ;
+        }
+    a {
+        color : #5fa9ee ;
+        }
+    img {
+        filter: grayscale(20%);
+        }   
+    }
+
+// dark & light toggle
+
+@import 'nib'
+
+  // nib
+  support-for-ie = false
+
+  $timing = 0.8s
+  $blue-night = #200F37
+  $blue-night-2 = #272065
+  $blue-day = #21D2F2
+  $blue-day-2 = #B0FFF8
+  $moon-shade = #F8E3EF
+  $cloud-shade = #F6F8F8
+  $w = 300px
+  $h = 140px
+  $offset = 8px
+  $easeOutQuad = cubic-bezier(0.165, 0.84, 0.44, 1)
+  $easeOutBack = cubic-bezier(0.175, 0.885, 0.32, 1.275)
+
+  $absolute
+    position absolute
+    left 0
+    top 0
+    right 0
+    bottom 0
+
+  cicles($size, $posx, $posy, $gradient=null, $color=#fff)
+    width floor($size)
+    height @width
+    display block
+    position absolute
+    left $posx
+    top $posy
+    if $gradient == null
+      background $color
+      box-shadow (@height*3) (@height*-3) 0 -3px $color
+      filter blur(.5px)
+    else
+      background linear-gradient(unquote($gradient), $color, rgba($color, 0))
+      box-shadow @height (@height*-1) 0 ($offset*-1) rgba($color, .5)
+    border-radius 100%
+
+  .switch
+    width $w
+    height $h
+    display block
+    position relative
+    // Center
+    margin 50px auto
+
+    &__background
+      @extends $absolute
+      border-radius ($h/2)
+      box-shadow 0 ($h/4) ($h/2) ($offset*-2) rgba($blue-night, .3)
+      transition box-shadow $timing
+      overflow hidden
+
+      &:before
+        @extends $absolute
+        content ''
+        background linear-gradient($blue-night, $blue-night-2)
+        border-radius @border-radius
+        transition opacity $timing
+        overflow hidden
+        z-index -2
+
+      &:after
+        @extends $absolute
+        content ''
+        opacity 0
+        background linear-gradient(left, $blue-day, $blue-day-2)
+        border-radius @border-radius
+        transition opacity $timing
+        // overflow hidden
+        z-index -2
+
+    &__toggle
+      content ''
+      height ($h - ($offset*2))
+      width @height
+      position relative
+      display block
+      top $offset
+      left @top
+      background white
+      border-radius 100%
+      box-shadow inset ($offset) ($offset*-1) 0 $moon-shade, 0 0 ($h/1.5) rgba(white, .65)
+      transition left $timing, box-shadow $timing
+      overflow hidden
+      cursor pointer
+
+      // Sun
+      &:before
+      &:after
+        content ''
+        height 90%
+        width @height
+        position absolute
+        left 50%
+        top 50%
+        z-index -1
+        opacity 0
+        transition transition $timing, opacity $timing
+        background rgba(white, 0.65)
+        filter blur($offset)
+
+      &:before
+        transform translate(-50%, -50%) rotate(45deg)
+
+      &:after
+        transform translate(-50%, -50%)
+
+    // Night
+    &__moon
+      cicles($size:($h/5), $posx:40%, $posy:35%, $gradient:'top right', $color:$moon-shade)
+      transition transform $timing, opacity $timing
+
+      &:before
+        content ''
+        cicles($size:($h/6), $posx:-70%, $posy:195%, $gradient:'top right', $color:$moon-shade)
+        transform rotate(-60deg)
+
+      &:after
+        content ''
+        cicles($size:($h/4), $posx:190%, $posy:55%, $gradient:'top right', $color:$moon-shade)
+
+    &__stars
+      cicles($size:($h/16), $posx:60%, $posy:35%, $color:white)
+      transition transform $timing, opacity $timing
+
+      &:before
+        content ''
+        cicles($size:($h/20), $posx:700%, $posy:560%, $color:white)
+        transform rotate(-75deg)
+        transition transform $timing, opacity $timing
+
+      &:after
+        content ''
+        height ($h/28)
+        width @height
+        position absolute
+        left 200%
+        top 260%
+        opacity 0
+        background linear-gradient(left, white, rgba(white, 0))
+        filter blur(.5px)
+        border-radius 100%
+        animation falling-stars ($timing*8) $easeOutQuad infinite
+        animation-delay $timing*4
+
+    &__clouds
+      height floor($h/5)
+      width @height
+      background white
+      position absolute
+      top 50%
+      left (@width*-3)
+      display block
+      transition ($timing*2) $easeOutBack
+      border-radius 50% 50% 0 50%
+
+      &:before
+      &:after
+        content ''
+        height floor($h/6)
+        width @height
+        background white
+        position absolute
+        border-radius 50% 50% 0 50%
+        left -33%
+        bottom 0
+        box-shadow inset ($offset/2) ($offset/4*-1) 0 $cloud-shade
+
+      &:after
+        height floor($h/6.5)
+        width @height
+        left auto
+        right -30%
+        border-radius 100%
+
+    &__input
+      display none
+
+      &:checked + ^[0]__background
+        box-shadow 0 ($h/4) ($h/2) ($offset*-2) rgba($blue-day, .3)
+
+        // Night
+        &:before
+          opacity 0
+        // Day
+        &:after
+          opacity 1
+
+        & ^[0]__toggle
+          // transform translateX($w - $h)
+          left ($w - $h + $offset) // temp fix
+          box-shadow inset 0 0 0.1px white, 0 0 ($offset*4) white
+          animation overlay 0s forwards
+          animation-delay ($timing/2)
+
+          &:before
+          &:after
+            opacity 1
+            transition-delay @animation-delay
+
+          &:before
+            transform translate(-50%, -50%) rotate(45deg)
+            animation spin-before ($timing*16) linear infinite
+
+          &:after
+            transform translate(-50%, -50%)
+            animation spin-after ($timing*16) linear infinite
+
+        & ^[0]__moon
+          opacity 0
+          transform translate(-50%, 100%) rotate(30deg)
+
+        & ^[0]__stars
+          opacity 0
+          transform translateX(floor($h/3*-1))
+
+          &:before
+            opacity 0
+            transform translateX(floor($h/4*-1))
+
+          &:after
+            animation none
+
+        & ^[0]__clouds
+          transform translateX($w/2)
+          transition-delay ($timing/4)
+          animation cloud-move ($timing*10) linear infinite
+          animation-delay ($timing*2)
+
+          &:before
+          &:after
+            animation cloud-move ($timing*10) linear infinite
+            animation-delay ($timing*2)
+
+
+  @keyframes overlay
+    0%
+      overflow hidden
+    100%
+      overflow visible
+
+  @keyframes spin-before
+    0%
+      transform translate(-50%, -50%) rotate(45deg)
+    100%
+      transform translate(-50%, -50%) rotate(360deg+45)
+
+  @keyframes spin-after
+    0%
+      transform translate(-50%, -50%) rotate(0)
+    100%
+      transform translate(-50%, -50%) rotate(360deg)
+
+  @keyframes falling-stars
+    0%
+      width 50%
+      opacity 1
+      transform translate($h/2, ($h/2*-1)) rotate(-45deg)
+    5%
+      width 400%
+      opacity 1
+    15%
+      box-shadow -100px -30px 0 -3px rgba(white)
+    25%
+    100%
+      box-shadow -100px -30px 0 -6px rgba(white)
+      width 400%
+      opacity 0
+      transform translate(($h/2*-1), $h/2) rotate(-45deg)
+
+  @keyframes cloud-move
+    0%
+      box-shadow inset ($offset/2) ($offset/4*-1) 0 $cloud-shade, floor($w/3*-1) floor($h/3*-1) 5px -2px rgba($blue-day, 0)
+    50%
+      box-shadow inset ($offset/2) ($offset/4*-1) 0 $cloud-shade, floor($w/10*-1) floor($h/3*-1) 6px -2px lighten($blue-day, 50%)
+    90%
+    100%
+      box-shadow inset ($offset/2) ($offset/4*-1) 0 $cloud-shade, floor($w/100*-1) floor($h/3*-1) 15px 2px rgba($blue-day, 0)
+
+
+
+
+/* max-width pour faibles résolutions */
+@media screen and (max-width: 640px) {
+	#menu a {
+		display:block;
+	}
+	#menu li {
+		float:none;
+		width:100%;
+	}
+	#main, #aside, #menu {
+		clear:both;
+		width:100%;
+	}
+}
+
+/* button top */
+
+#myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 50px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: rgb(255, 146, 146); /* Set a background color */
+    color: rgb(255, 149, 149); /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 25px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 38px; /* Increase font size */
+  }
+  
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
+
+// second test
+
+/* CSS only for demo purpose*/
+#btn-back-to-top {
+    position: fixed;
+    display: none;
+  }
+
+
+
+// button download
+
+/* Style buttons */
+.btnDwld {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  /* Darker background on mouse-over */
+  .btnDwld:hover {
+    background-color: RoyalBlue;
+  }
